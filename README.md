@@ -1,2 +1,1 @@
-# reactproduct
-练手项目
+# react-product
