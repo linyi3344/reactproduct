@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from 'react-router';
-import login from'../assets/css/loginandreg.css';
+
 class Login extends React.Component {
     constructor(){
         super()
@@ -12,34 +12,34 @@ class Login extends React.Component {
         this.iptPassword=this.iptPassword.bind(this)
         this.dl=this.dl.bind(this)
     }
-    dl(){
-        console.log('数据请求成功')
-        if(this.password != ''){
-            let url = 'http://localhost:3000/user1/login'
-            fetch(
-              url,
-              {
-                method:'POST',
-                headers:{"Content-type":"application/json"},
-                body:JSON.stringify({username:this.state.username,password:this.state.password})     
-              }
-          ).then(
-              res=>res.json().then(
-                data=>{
-                    console.log(data)
-                    if(data.error==0){
-                      alert(data.msg);
-                      // this.props.router.push({pathname:'/login'})
-                    localStorage.setItem("Uid",this.state.username)
-                    hashHistory.push('/user')
-                    }else{
-                        alert(data.msg)
-                    }
-                }
-            )
-          )
-        } 
-    }
+    // dl(){
+    //     console.log('数据请求成功')
+    //     if(this.password != ''){
+    //         let url = 'http://localhost:3000/login'
+    //         fetch(
+    //           url,
+    //           {
+    //             method:'POST',
+    //             headers:{"Content-type":"application/json"},
+    //             body:JSON.stringify({username:this.state.username,password:this.state.password})     
+    //           }
+    //       ).then(
+    //           res=>res.json().then(
+    //             data=>{
+    //                 console.log(data)
+    //                 if(data.error==0){
+    //                   alert(data.msg);
+    //                   // this.props.router.push({pathname:'/login'})
+    //                 localStorage.setItem("Uid",this.state.username)
+    //                 hashHistory.push('/user')
+    //                 }else{
+    //                     alert(data.msg)
+    //                 }
+    //             }
+    //         )
+    //       )
+    //     } 
+    // }
     iptUsername(ev){
         this.setState({
             username:ev.target.value  
@@ -89,7 +89,7 @@ class Login extends React.Component {
                         </li>
                     </ul>
                     <div className="footbox">
-                        <input type="button" value="登 录" className="login-btn"/>
+                        <input type="button" value="登 录" className="login-btn" onClick={this.dl}/>
                         <a href="javascript:;" className="tishi">忘记密码？</a>
                     </div>
                 </div>

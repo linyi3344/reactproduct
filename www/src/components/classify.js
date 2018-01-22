@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
-
+//。对外导出什么无所谓
 class footbar extends Component {
     constructor(){
         super();

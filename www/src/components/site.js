@@ -24,19 +24,24 @@ class Site extends Component {
                 {
                   addressmsg.map((item,index)=>{
                     return(
-                    <Link to="/siteAmend" key={index} onClick={()=>{this.SendSiteMsg(item)}}>
+                    <Link to="siteAmend" key={index} onClick={()=>{this.SendSiteMsg(item)}}>
                     <p>收货人：{item.username}&nbsp;&nbsp;{item.Phonenum}</p>
                     <span><em>{index==0?"[默认]":undefined}</em>{item.Province}{item.Address}</span>
                     <i className="icon icon-select"></i>
                   </Link>)
                   })
                 }
-                  {/* <Link to="/siteAmend">
+                  {/* <Link to="/site/001">
                     <p>收货人：郭小帅&nbsp;&nbsp;13688888888</p>
                     <span><em>[默认]</em>广州市番禺区市桥街道81号</span>
                     <i className="icon icon-select"></i>
                   </Link>
-                  <Link to="/siteAmend">
+                  <Link to="/site/002">
+                    <p>收货人：郭小帅&nbsp;&nbsp;13688888888</p>
+                    <span><em>[默认]</em>广州市番禺区市桥街道81号</span>
+                    <i className="icon icon-select"></i>
+                  </Link>
+                  <Link to="/site/003">
                     <p>收货人：郭小帅&nbsp;&nbsp;13688888888</p>
                     <span>广州市番禺区市桥街道81号</span>
                     <i className="icon icon-select"></i>

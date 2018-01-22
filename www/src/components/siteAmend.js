@@ -21,8 +21,13 @@ class siteAmend extends Component {
     let AmendMsg={username,Phonenum,Province,Address}
     send(AmendMsg)
   }
+  DelAddressMsg(){
+    // let {send} = this.props; 
+    console.log("同理可得")
+
+  }
   render() {
-    // console.log(this.props);
+    console.log(this.props);
 
     let {topbartitle,AddAmendMsg} = this.props; //解构了mapStateToProps传递过来的属性
     return (
@@ -61,14 +66,12 @@ class siteAmend extends Component {
         </article>
         <div className="add-site">
           <Link to="/site" className="btn bottom-btn" onClick={this.savemsg}>保存地址</Link>
-          <Link to="/site" className="btn bottom-btn bottom-btn2">删除地址</Link>
+          <Link to="/site" className="btn bottom-btn bottom-btn2" onClick={this.DelAddressMsg}>删除地址</Link>
         </div>
       </div>
     )
   }
 }
-// connect是个函数,调用后，返回一个函数,这个函数可以包裹UI组件,最终返回一个容器组件 const Container =
-// connect()(ToDoList); export default Container 状态satte来的属性都在mapStateToProps里面
 const mapStateToProps = (state, ownProps) => {
   // console.log('ownPorps:',ownProps); 外部调用容器组件是传递的props参数
   return {topbartitle: state.topbartitle, sending: state.sending,AddAmendMsg:state.AddAmendMsg}
@@ -79,6 +82,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     send: (data) => {
       dispatch({type: 'MessAge', payload: data})
+    },
+    DelAddressMsg: (data) => {
+      dispatch({type: 'DelAddressMsg', payload: data})
     },
     showLoading: () => {
       dispatch({type: 'START_LOADING'});

@@ -24,13 +24,16 @@ const reducer = (state=defaultState, action)=>{
         bload:false
       });
       break;
-    case 'CommunityAddData':
+      case 'CommunityAddData':
       return Object.assign({},state,{
         list:state.list.concat(payload)
       });
       break
+    case 'DelAddressMsg':console.log(Object)
+      // return Object.assign({},state,{});
+      break
       //修改地址
-    case 'MessAge':
+      case 'MessAge':
       return Object.assign(      
         state.addressmsg.map((item) =>
       {payload.id === item.id ?

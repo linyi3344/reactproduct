@@ -1,6 +1,6 @@
 import React from "react";
 import {Link, hashHistory} from 'react-router';
-import reg from'../assets/css/loginandreg.css';
+// import reg from'../assets/css/loginandreg.css';
 
 class Reg extends React.Component {
     constructor(){

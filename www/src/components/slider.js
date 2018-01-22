@@ -20,22 +20,22 @@ class slider extends Component {
 	}
     render() {
         return (
-					<div className="m-slider" id="slider">
-						<div className="ks_dbox ks_ts">
-								<div className="ks_wrap">
-									<img src="src/assets/images/banner1.jpg" alt=""/>
-								</div>
-								<div className="ks_wrap">
-									<img src="src/assets/images/banner2.jpg" alt=""/>
-								</div>
-								<div className="ks_wrap">
-									<img src="src/assets/images/banner3.jpg" alt=""/>
-								</div>
+			<div className="m-slider" id="slider">
+				<div className="ks_dbox ks_ts">
+						<div className="ks_wrap">
+							<img src="src/assets/images/banner1.jpg" alt=""/>
 						</div>
-						<div className="ks-circles">
-									<ul className="ks_wt"></ul>
-							</div>
+						<div className="ks_wrap">
+							<img src="src/assets/images/banner2.jpg" alt=""/>
+						</div>
+						<div className="ks_wrap">
+							<img src="src/assets/images/banner3.jpg" alt=""/>
+						</div>
+				</div>
+				<div className="ks-circles">
+							<ul className="ks_wt"></ul>
 					</div>
+			</div>
         )
     }
 }

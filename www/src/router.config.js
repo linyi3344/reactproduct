@@ -18,10 +18,10 @@ import siteAmend from './components/siteAmend';//修改地址
 import Detail from './components/productDetails';//商品详情
 import ConfirmOrder from './components/ConfirmOrder';//确认订单
 import CommunityAdd from './components/communityAdd';//编辑评论
-import ProductDetails from './components/productDetails';//
+import ProductDetails from './components/productDetails';//商品列表
 
 
-
+//路由配置
 const RouterConfig = () => (
   <Router history={hashHistory}>
     <Route path="/" component={App}>

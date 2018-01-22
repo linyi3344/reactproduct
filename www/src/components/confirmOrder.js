@@ -56,11 +56,6 @@ class ConfirmOrder extends Component {
         )
     }
 }
-//connect是个函数,调用后，返回一个函数,这个函数可以包裹UI组件,最终返回一个容器组件
-// const Container = connect()(ToDoList);
-// export default Container
-
-//状态satte来的属性都在mapStateToProps里面
 const mapStateToProps=(state,ownProps)=>{
     // console.log('ownPorps:',ownProps);   //外部调用容器组件是传递的props参数
     return {
@@ -68,8 +63,7 @@ const mapStateToProps=(state,ownProps)=>{
 	  sending:state.sending
     }
   };
-  
-  //所有需要递交的action请求
+   //所有需要递交的action请求
   const mapDispatchToProps=(dispatch,ownProps)=>{
     return {
       send:(data)=>{dispatch({type:'ADD',payload:data})},
@@ -93,7 +87,7 @@ const mapStateToProps=(state,ownProps)=>{
 			}
     }
   };
-  
+
   export default connect(
     mapStateToProps,
     mapDispatchToProps
