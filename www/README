@@ -7,3 +7,12 @@ npm run dev
 
 
 /*已完成的有路由跳转，状态管理，公共组件*/
+/*如果需要跑后端nodejs，,跨域详见community组件*/
+
+/*1.进入www文件夹*/
+cd express-cli 
+/*2.安装依赖*/
+npm install
+/*3.让项目跑起来*/
+npm run dev
+/*没有数据库也不慌，用数据模拟。写了三条数据，够看了*/
