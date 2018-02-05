@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class ComMunity extends Component {
     render() {
         let {send,list} = this.props; //解构了mapStateToProps传递过来的属性
-     
         return (
             <div className="margin-bottom">
                 {
@@ -61,41 +60,6 @@ class ComMunity extends Component {
         ).catch(
             error=>console.log(error,"getdata fail")
         )
-//----------------------------------------------
-//忠告，中间键一定要配置在响应前啊。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
-        // let myHeaders = new Headers({
-        //     'Access-Control-Allow-Origin': '*',
-        //     'Content-Type': 'text/plain'
-        // });
-        // fetch(url, {
-        //     method: 'post',
-        //     headers: myHeaders,
-        //     mode: 'cors'
-        // }) .then((res) => {
-        //     // TODO 
-        //     console.log("15555555");
-            
-        // })
-//---------------------------------------------------
-// fetch(url, {
-//     method: "POST",
-// mode: "no-cors",
-// headers: {
-// "Content-Type": "application/x-www-form-urlencoded"
-// },
-// body: "请求参数"
-//     }).then(function(res) {
-// console.log("Response succeeded?", JSON.stringify(res.ok));
-// console.log(JSON.stringify(res));
-// }).catch(function(e) {
-// console.log("fetch fail", JSON.stringify(params));
-// });
-//--------------------------------------------------  
-    // headers:{'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'},
-    // headers:("Access-Control-Allow-Origin: *"), 
-    //headers:{'Content-Type':'application/json'},
-        
-//-----------------------------------
     }
 }
 
@@ -106,7 +70,6 @@ const mapStateToProps=(state,ownProps)=>{
         list:state.list,
     }
   };
-  
   //所有需要递交的action请求
   const mapDispatchToProps=(dispatch,ownProps)=>{
     return {
@@ -118,7 +81,6 @@ const mapStateToProps=(state,ownProps)=>{
       }
     }
   };
-  
   export default connect(
     mapStateToProps,
     mapDispatchToProps
